@@ -38,7 +38,7 @@ body {
   position: absolute;
   left: 150px;
   top: 70px;
-  width: 190px;
+  width: 155px;
   opacity: 0.78;
 }
 
@@ -125,7 +125,7 @@ h2 {
 .title-icon.note {
   width: 34px;
   top: -6px;
-  left: 250px;
+  left: 245px;
 }
 
 .title-icon.feather {
@@ -136,7 +136,7 @@ h2 {
 
 .title-icon.leaf {
   width: 46px;
-  top: -6px;
+  top: -10px;
   left: 220px;
 }
 

@@ -116,30 +116,6 @@ h2 {
   position: relative;
 }
 
-.title-icon {
-  position: absolute;
-  opacity: 0.78;
-  pointer-events: none;
-}
-
-.title-icon.note {
-  width: 28px;
-  top: -6px;
-  left: 210px;
-}
-
-.title-icon.feather {
-  width: 80px;
-  top: -14px;
-  right: 38px;
-}
-
-.title-icon.leaf {
-  width: 60px;
-  top: -6px;
-  left: 200px;
-}
-
 .player-card {
   height: 154px;
   padding: 17px;

@@ -36,9 +36,9 @@ body {
 
 .boat-icon {
   position: absolute;
-  left: 220px;
-  top: 70px;
-  width: 155px;
+  left: 150px;
+  top: 95px;
+  width: 150px;
   opacity: 0.78;
 }
 
@@ -123,21 +123,21 @@ h2 {
 }
 
 .title-icon.note {
-  width: 34px;
+  width: 28px;
   top: -6px;
-  left: 245px;
+  left: 195px;
 }
 
 .title-icon.feather {
-  width: 90px;
+  width: 80px;
   top: -14px;
-  right: 70px;
+  right: 38px;
 }
 
 .title-icon.leaf {
-  width: 46px;
-  top: -10px;
-  left: 220px;
+  width: 40px;
+  top: -6px;
+  left: 190px;
 }
 
 .player-card {

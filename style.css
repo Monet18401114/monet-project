@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: url("assets/background/bg-home.png") center top / cover fixed no-repeat;
+  font-family: "Gowun Batang", "Batang", serif;
+  color: #f5f1df;
+  letter-spacing: 0.3px;
+}
+
+.wrap {
+  width: 860px;
+  margin: 45px auto;
+}
+
+.panel {
+  background: rgba(15, 34, 27, 0.56);
+  border: 1px solid rgba(245, 241, 223, 0.25);
+  border-radius: 8px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.38);
+}
+
+.hero {
+  height: 282px;
+  position: relative;
+  padding: 35px;
+}
+
+.main-logo {
+  font-size: 56px;
+  line-height: 1.22;
+  font-weight: 400;
+}
+
+.boat-icon {
+  position: absolute;
+  left: 190px;
+  top: 70px;
+  width: 190px;
+  opacity: 0.78;
+}
+
+.top-info {
+  position: absolute;
+  right: 26px;
+  top: 22px;
+  text-align: right;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+button {
+  font-family: inherit;
+}
+
+.top-info button,
+.nav button,
+.link-btn {
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.top-info button:hover,
+.nav button:hover,
+.link-btn:hover {
+  text-decoration: underline;
+}
+
+.slogan {
+  position: absolute;
+  left: 35px;
+  bottom: 34px;
+  margin: 0;
+  font-size: 25px;
+}
+
+.nav {
+  height: 58px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+
+.nav button {
+  font-size: 17px;
+}
+
+.nav span {
+  opacity: 0.6;
+}
+
+.two-column {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 18px;
+}
+
+.box {
+  min-height: 230px;
+  padding: 22px;
+}
+
+h2 {
+  margin: 0 0 17px 0;
+  font-size: 27px;
+  font-weight: 400;
+  position: relative;
+}
+
+.title-icon {
+  position: absolute;
+  opacity: 0.78;
+  pointer-events: none;
+}
+
+.title-icon.note {
+  width: 38px;
+  top: -10px;
+  left: 255px;
+}
+
+.title-icon.feather {
+  width: 105px;
+  top: -18px;
+  right: 5px;
+}
+
+.title-icon.leaf {
+  width: 52px;
+  top: -9px;
+  left: 225px;
+}
+
+.player-card {
+  height: 154px;
+  padding: 17px;
+  border-radius: 8px;
+  background: rgba(224, 235, 218, 0.68);
+  color: #24372d;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.album-cover {
+  width: 122px;
+  height: 122px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.player-info {
+  flex: 1;
+}
+
+.song-title {
+  font-size: 29px;
+  margin-bottom: 6px;
+}
+
+.composer {
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 16px;
+}
+
+.progress {
+  width: 100%;
+  height: 4px;
+  background: rgba(20, 39, 30, 0.38);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.progress-fill {
+  width: 0%;
+  height: 100%;
+  background: #1d362a;
+}
+
+.controls {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.controls button {
+  font-size: 20px;
+  color: #24372d;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 0 8px;
+}
+
+.join-list {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.join-list li {
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.link-btn {
+  text-decoration: underline;
+}
+
+.small-note {
+  margin-top: 20px;
+  font-size: 12.5px;
+  line-height: 1.9;
+  opacity: 0.84;
+}
+
+.guide-area {
+  margin-top: 18px;
+  padding: 24px;
+}
+
+.inner-box {
+  background: rgba(10, 27, 21, 0.46);
+  border: 1px solid rgba(244, 240, 223, 0.14);
+  border-radius: 8px;
+  padding: 20px 27px;
+}
+
+.inner-box ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.inner-box li {
+  margin-bottom: 12px;
+  font-size: 15.5px;
+  line-height: 1.75;
+}
+
+.footer {
+  margin-top: 18px;
+  min-height: 102px;
+  padding: 18px 28px;
+  display: grid;
+  grid-template-columns: 44px 175px 70px 1px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.footer-logo {
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.footer-boat {
+  width: 65px;
+  opacity: 0.68;
+}
+
+.footer-line {
+  width: 1px;
+  height: 55px;
+  background: rgba(244, 240, 223, 0.36);
+}
+
+.footer-info {
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    width: 94%;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 14px 10px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-boat,
+  .footer-line {
+    display: none;
+  }
+}

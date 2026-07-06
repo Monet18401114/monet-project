@@ -123,21 +123,21 @@ h2 {
 }
 
 .title-icon.note {
-  width: 38px;
-  top: -10px;
-  left: 255px;
+  width: 34px;
+  top: -6px;
+  left: 245px;
 }
 
 .title-icon.feather {
-  width: 105px;
-  top: -18px;
-  right: 5px;
+  width: 90px;
+  top: -14px;
+  right: 35px;
 }
 
 .title-icon.leaf {
-  width: 52px;
-  top: -9px;
-  left: 225px;
+  width: 46px;
+  top: -6px;
+  left: 210px;
 }
 
 .player-card {

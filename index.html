@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모네</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="panel hero">
+      <div class="top-info">
+        <button data-page="language">English/한국어</button><br>
+        <span>상담문의 04-1840-1114</span>
+      </div>
+
+      <div class="main-logo">모<br>네</div>
+      <img class="boat-icon" src="assets/icons/icon-boat.png" alt="종이배">
+
+      <p class="slogan">당신에게 어울리는 ‘색’을 찾아드립니다.</p>
+    </header>
+
+    <nav class="panel nav">
+      <button data-page="home">Home</button><span>|</span>
+      <button data-page="about">모네 소개</button><span>|</span>
+      <button data-page="coloring">컬러링</button><span>|</span>
+      <button data-page="matching">매칭 서비스</button><span>|</span>
+      <button data-page="notice">공지사항</button><span>|</span>
+      <button data-page="center">고객 센터</button>
+    </nav>
+
+    <main class="two-column">
+      <section class="panel box">
+        <h2>| 클로드 헌정 신곡
+          <img class="title-icon note" src="assets/icons/icon-notehead.png" alt="">
+        </h2>
+
+        <div class="player-card">
+          <img class="album-cover" src="assets/album/lis-envoles.png" alt="Lis envolés album cover">
+
+          <div class="player-info">
+            <div class="song-title">Lis envolés</div>
+            <div class="composer">Claude</div>
+
+            <div class="progress" id="progress">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="controls">
+              <button id="prevBtn" type="button">◀</button>
+              <button id="playBtn" type="button">▶</button>
+              <button id="nextBtn" type="button">▶</button>
+            </div>
+
+            <audio id="audio" src="assets/music/lis-envoles.mp3"></audio>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel box">
+        <h2>| 회원가입/로그인
+          <img class="title-icon feather" src="assets/icons/icon-feather.png" alt="">
+        </h2>
+
+        <ul class="join-list">
+          <li><button class="link-btn" data-page="paperJoin">페이퍼 전용 회원가입/로그인</button></li>
+          <li><button class="link-btn" data-page="colorJoin">컬러 전용 회원가입/로그인</button></li>
+        </ul>
+
+        <p class="small-note">
+          회원가입은 신분증 검증절차에 따라 2~3일 소요됩니다.<br>
+          페이퍼는 컬러 등록 점검차로 함께 신청하시면 더 소요될 수 있습니다.
+        </p>
+      </section>
+    </main>
+
+    <section class="panel guide-area">
+      <h2>| 모네 컬러링 안내
+        <img class="title-icon leaf" src="assets/icons/icon-leaf.png" alt="">
+      </h2>
+
+      <div class="inner-box">
+        <ul>
+          <li>모네는 페이퍼와 컬러가 안전하고 합법적으로 컬러링을 맺을 수 있도록 중개하는 공식 기관입니다.</li>
+          <li>전담 중매사는 페이퍼의 등급과 성향을 바탕으로 적합한 컬러를 추천합니다.</li>
+          <li>추천을 받은 컬러는 자신을 선택한 페이퍼들 가운데 원하는 상대를 직접 선택할 권리를 가집니다.</li>
+          <li>서로의 선택이 일치할 경우 공식 컬러링 계약이 체결됩니다.</li>
+          <li>기본 계약은 6개월 동안 유지됩니다.</li>
+          <li>계약 종료 후에는 모네를 통해 언제든지 연장 계약을 신청할 수 있으며, 연장 계약을 세 번 체결 완료한 경우 종신 계약이 허가됩니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="panel footer">
+      <div class="footer-logo">모<br>네</div>
+      <div>공식 컬러링 중개 기관</div>
+      <img class="footer-boat" src="assets/icons/icon-boat.png" alt="">
+      <div class="footer-line"></div>
+      <div class="footer-info">
+        모네 본사: 뮤트 구역 1-1 모네 빌딩<br>
+        TEL: 04-1840-1114<br>
+        E-mail: monet.official@mute.com
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

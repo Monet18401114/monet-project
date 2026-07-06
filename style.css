@@ -283,4 +283,13 @@ h2 {
   text-decoration: none;
 }
 
+@media (max-width: 900px) {
+  .boat-icon {
+    left: 50%;
+    top: 55px;
+    width: 180px;
+    transform: translateX(-50%);
+  }
+}
+
 ------

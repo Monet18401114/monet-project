@@ -676,3 +676,89 @@ height:18px;
   box-shadow: inset 0 0 10px rgba(255,255,255,0.25),
               0 0 10px rgba(245,241,223,0.18);
 }
+/* 모바일 본인인증 compact 버전 */
+@media screen and (max-width: 700px) {
+  #loginOverlay .login-card {
+    width: 86vw !important;
+    max-height: 78vh !important;
+    padding: 24px 24px !important;
+    overflow-y: auto !important;
+  }
+
+  #loginOverlay .login-title {
+    margin-bottom: 14px !important;
+  }
+
+  #loginOverlay .login-logo {
+    font-size: 42px !important;
+  }
+
+  #loginOverlay .login-boat {
+    width: 68px !important;
+  }
+
+  #loginOverlay .login-text {
+    font-size: 19px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 20px !important;
+  }
+
+  #loginOverlay .login-row {
+    display: grid !important;
+    grid-template-columns: 72px 1fr 1fr !important;
+    gap: 8px !important;
+    align-items: center !important;
+    margin: 13px 0 !important;
+  }
+
+  #loginOverlay .login-row label {
+    width: 72px !important;
+    font-size: 20px !important;
+    margin: 0 !important;
+  }
+
+  #loginOverlay .login-row input {
+    grid-column: 2 / 4 !important;
+    height: 42px !important;
+    font-size: 17px !important;
+  }
+
+  #loginOverlay .raceBtn,
+  #loginOverlay .groupBtn {
+    width: 100% !important;
+    height: 42px !important;
+    font-size: 18px !important;
+  }
+
+  #loginOverlay .login-card small {
+    display: block !important;
+    margin: 6px 0 10px 80px !important;
+    font-size: 14px !important;
+  }
+
+  #loginOverlay #captchaText {
+    grid-column: 2 / 3 !important;
+    width: 100% !important;
+    height: 42px !important;
+    font-size: 18px !important;
+    letter-spacing: 5px !important;
+  }
+
+  #loginOverlay #refreshCaptcha {
+    grid-column: 3 / 4 !important;
+    width: 100% !important;
+    height: 42px !important;
+  }
+
+  #loginOverlay #captchaInput {
+    grid-column: 2 / 4 !important;
+    width: 100% !important;
+    margin-top: 4px !important;
+  }
+
+  #loginOverlay #loginBtn {
+    margin-top: 18px !important;
+    padding: 11px !important;
+    font-size: 20px !important;
+  }
+}

@@ -205,3 +205,39 @@ loadingOverlay.style.display="none";
 },60);
 
 };
+// 선택 버튼 표시 보정
+document.querySelectorAll(".raceBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".raceBtn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    race = btn.dataset.race;
+
+    if (race === "color") {
+      group = "";
+      document.querySelectorAll(".groupBtn").forEach(b => {
+        b.classList.remove("active");
+        b.disabled = true;
+        b.style.opacity = "0.35";
+      });
+    }
+
+    if (race === "paper") {
+      document.querySelectorAll(".groupBtn").forEach(b => {
+        b.disabled = false;
+        b.style.opacity = "1";
+      });
+    }
+  });
+});
+
+document.querySelectorAll(".groupBtn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (btn.disabled) return;
+
+    document.querySelectorAll(".groupBtn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    group = btn.dataset.group;
+  });
+});

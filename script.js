@@ -52,7 +52,7 @@ document.querySelectorAll("[data-page]").forEach((button) => {
     const page = button.dataset.page;
 
     const routes = {
-      home: "#",
+      home: "index.html",
       about: "about.html",
       coloring: "coloring.html",
       matching: "matching.html",

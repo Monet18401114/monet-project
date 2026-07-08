@@ -246,3 +246,46 @@ document.querySelectorAll(".groupBtn").forEach(btn => {
     group = btn.dataset.group;
   });
 });
+// =======================
+// Page Switch
+// =======================
+
+const pageHome = document.getElementById("pageHome");
+const pageAbout = document.getElementById("monetAboutSection");
+
+function showSitePage(page) {
+  if (pageHome) pageHome.style.display = "none";
+  if (pageAbout) pageAbout.style.display = "none";
+
+  if (page === "home" && pageHome) {
+    pageHome.style.display = "block";
+  }
+
+  if (page === "about" && pageAbout) {
+    pageAbout.style.display = "block";
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.querySelectorAll("[data-page='home']").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    showSitePage("home");
+  }, true);
+});
+
+document.querySelectorAll("[data-page='about']").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    showSitePage("about");
+  }, true);
+});
+
+document.querySelectorAll(".secret-spark").forEach(letter => {
+  letter.addEventListener("click", () => {
+    console.log("모네의 편지 팝업 연결 예정");
+  });
+});

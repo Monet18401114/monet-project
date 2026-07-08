@@ -145,5 +145,25 @@
     </div>
   </div>
 </div>
+  <script>
+  const letterPopup = document.getElementById("letterPopup");
+  const closeLetter = document.getElementById("closeLetter");
+
+  document.querySelectorAll(".secret-spark").forEach(letter => {
+    letter.addEventListener("click", () => {
+      letterPopup.classList.remove("hidden-letter");
+    });
+  });
+
+  closeLetter.addEventListener("click", () => {
+    letterPopup.classList.add("hidden-letter");
+  });
+
+  letterPopup.addEventListener("click", (e) => {
+    if (e.target.classList.contains("letter-dark")) {
+      letterPopup.classList.add("hidden-letter");
+    }
+  });
+</script>
 </body>
 </html>

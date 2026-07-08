@@ -104,28 +104,38 @@ document
 .getElementById("refreshCaptcha")
 .onclick=makeCaptcha;
 
-document
-.querySelectorAll(".raceBtn")
-.forEach(btn=>{
+document.querySelectorAll(".raceBtn").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll(".raceBtn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-btn.onclick=()=>{
+    race = btn.dataset.race;
 
-race=btn.dataset.race;
-
-};
-
+    if (race === "color") {
+      group = "";
+      document.querySelectorAll(".groupBtn").forEach(b => {
+        b.classList.remove("active");
+        b.disabled = true;
+        b.style.opacity = "0.35";
+      });
+    } else {
+      document.querySelectorAll(".groupBtn").forEach(b => {
+        b.disabled = false;
+        b.style.opacity = "1";
+      });
+    }
+  };
 });
 
-document
-.querySelectorAll(".groupBtn")
-.forEach(btn=>{
+document.querySelectorAll(".groupBtn").forEach(btn => {
+  btn.onclick = () => {
+    if (btn.disabled) return;
 
-btn.onclick=()=>{
+    document.querySelectorAll(".groupBtn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
 
-group=btn.dataset.group;
-
-};
-
+    group = btn.dataset.group;
+  };
 });
 
 document

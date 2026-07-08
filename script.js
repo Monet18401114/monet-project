@@ -52,7 +52,7 @@ document.querySelectorAll("[data-page]").forEach((button) => {
     const page = button.dataset.page;
 
     const routes = {
-      home: "index.html",
+      home: "#",
       about: "about.html",
       coloring: "coloring.html",
       matching: "matching.html",
@@ -63,9 +63,14 @@ document.querySelectorAll("[data-page]").forEach((button) => {
       language: "language.html"
     };
 
-    if (routes[page]) {
-      window.location.href = routes[page];
-    }
+    if (page === "home") {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  return;
+}
+
+if (routes[page]) {
+  window.location.href = routes[page];
+}
   });
 });
 /*==========================

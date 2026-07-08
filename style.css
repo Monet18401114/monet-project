@@ -1187,3 +1187,84 @@ height:18px;
     top: 12px;
   }
 }
+#letterPopup {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.68);
+  backdrop-filter: blur(4px);
+}
+
+.letter-paper-box {
+  position: relative;
+  width: min(92vw, 620px);
+  height: min(88vh, 900px);
+  background: url("./monet-project/assets/letter/secret-letter.png") center / 100% 100% no-repeat;
+  z-index: 2;
+  padding: 150px 72px 75px;
+  overflow: hidden;
+}
+
+.letter-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 3;
+  background: rgba(245,241,223,0.9);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.letter-paper-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.letter-text {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  color: #314235;
+  font-size: 15px;
+  line-height: 1.9;
+  padding-right: 10px;
+}
+
+.secret-map-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 20px auto 10px;
+}
+
+.map-download {
+  display: block;
+  text-align: center;
+  margin: 0 auto 24px;
+  color: #314235;
+}
+
+@media (max-width: 700px) {
+  .letter-paper-box {
+    width: 94vw;
+    height: 86vh;
+    padding: 125px 42px 60px;
+  }
+
+  .letter-text {
+    font-size: 13.5px;
+  }
+}

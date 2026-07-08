@@ -111,7 +111,115 @@
     </footer>
 
   </div>
+<!-- =======================
+     Login Overlay
+======================== -->
 
+<div id="loginOverlay">
+
+    <div class="login-card">
+
+        <div class="login-title">
+
+            <div class="login-logo">
+                모<br>네
+            </div>
+
+            <img class="login-boat"
+                 src="./monet-project/assets/icons/icon-boat.png"
+                 alt="boat">
+
+        </div>
+
+        <p class="login-text">
+            보다 안전한 서비스 이용을 위해<br>
+            본인 인증을 진행해주세요.
+        </p>
+
+        <div class="login-row">
+            <label>성명</label>
+            <input id="userName" type="text">
+        </div>
+
+        <div class="login-row">
+            <label>종족</label>
+
+            <button class="raceBtn" data-race="color">컬러</button>
+
+            <button class="raceBtn" data-race="paper">페이퍼</button>
+        </div>
+
+        <small>* 소속은 페이퍼만 선택해주세요.</small>
+
+        <div class="login-row">
+            <label>소속</label>
+
+            <button class="groupBtn" data-group="good">온건파</button>
+
+            <button class="groupBtn" data-group="bad">급진파</button>
+        </div>
+
+        <div class="login-row">
+
+            <label>인증번호</label>
+
+            <span id="captchaText"></span>
+
+            <button id="refreshCaptcha">↻</button>
+
+            <input id="captchaInput">
+
+        </div>
+
+        <button id="loginBtn">
+            확인
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Error -->
+
+<div id="errorOverlay">
+
+    <div class="error-card">
+
+        <h2>| Error</h2>
+
+        <p>
+
+귀하께서는 서비스 대상자가 아니므로
+<br>
+본 사이트에서 5초 뒤에 추방됩니다.
+
+        </p>
+
+        <div id="countDown">
+5
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Loading -->
+
+<div id="loadingOverlay">
+
+    <div class="loading-card">
+
+        <img
+        src="./monet-project/assets/icons/icon-boat.png"
+        class="loadingBoat">
+
+        <h3>Loading ...</h3>
+
+        <progress id="loadingBar" value="0" max="100"></progress>
+
+    </div>
+
+</div>
   <script src="script.js"></script>
 </body>
 </html>

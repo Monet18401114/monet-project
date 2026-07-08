@@ -762,3 +762,49 @@ height:18px;
     font-size: 20px !important;
   }
 }
+/* 모바일 전체 폰트 축소 */
+@media screen and (max-width:700px){
+
+  /* 안내문 */
+  #loginOverlay .login-text{
+      font-size:17px !important;
+      line-height:1.45;
+  }
+
+  /* 라벨 (성명, 종족...) */
+  #loginOverlay .login-row label{
+      font-size:16px !important;
+  }
+
+  /* 버튼 */
+  #loginOverlay .raceBtn,
+  #loginOverlay .groupBtn{
+      font-size:16px !important;
+  }
+
+  /* 입력창 */
+  #loginOverlay input{
+      font-size:16px !important;
+  }
+
+  /* 인증번호 */
+  #captchaText{
+      font-size:18px !important;
+      letter-spacing:4px !important;
+  }
+
+  /* 확인 버튼 */
+  #loginBtn{
+      font-size:18px !important;
+  }
+
+  /* 안내 문구 */
+  #loginOverlay small{
+      font-size:13px !important;
+  }
+
+  /* 모네 글씨 */
+  .login-logo{
+      font-size:38px !important;
+  }
+}

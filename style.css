@@ -494,3 +494,77 @@ width:100%;
 height:18px;
 
 }
+/* 모바일 로그인 화면 보정 */
+@media (max-width: 700px) {
+  .login-card {
+    width: 88%;
+    max-height: 88vh;
+    overflow-y: auto;
+    padding: 28px 22px;
+  }
+
+  .login-logo {
+    font-size: 42px;
+  }
+
+  .login-boat {
+    width: 75px;
+  }
+
+  .login-text {
+    font-size: 18px;
+    margin-bottom: 22px;
+  }
+
+  .login-row {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .login-row label {
+    width: auto;
+    font-size: 18px;
+  }
+
+  .login-row button {
+    padding: 9px 12px;
+    font-size: 16px;
+  }
+
+  .login-row input {
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  #captchaText {
+    letter-spacing: 5px;
+    padding: 9px 12px;
+    font-size: 16px;
+  }
+
+  #refreshCaptcha {
+    padding: 8px 10px;
+  }
+
+  #loginBtn {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .error-card,
+  .loading-card {
+    width: 82%;
+    padding: 30px 24px;
+  }
+}
+
+/* 선택된 버튼 표시 */
+.raceBtn.active,
+.groupBtn.active {
+  background: rgba(245, 241, 223, 0.32);
+  border-color: rgba(245, 241, 223, 0.9);
+  box-shadow: 0 0 10px rgba(245, 241, 223, 0.25);
+  color: #fff8df;
+}

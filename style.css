@@ -367,7 +367,7 @@ line-height:1;
 
 .login-boat{
 
-width:90px;
+width:110px;
 
 opacity:.9;
 
@@ -508,7 +508,7 @@ height:18px;
   }
 
   .login-boat {
-    width: 75px;
+    width: 110px;
   }
 
   .login-text {
@@ -587,7 +587,7 @@ height:18px;
   }
 
   .login-boat {
-    width: 78px;
+    width: 110px;
   }
 
   .login-text {
@@ -694,7 +694,7 @@ height:18px;
   }
 
   #loginOverlay .login-boat {
-    width: 68px !important;
+    width: 110px !important;
   }
 
   #loginOverlay .login-text {

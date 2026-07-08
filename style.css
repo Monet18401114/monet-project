@@ -881,3 +881,107 @@ height:18px;
   );
   border-radius: 999px;
 }
+/* ===== 모네 소개 페이지 ===== */
+
+.monet-about-section {
+  width: min(92%, 760px);
+  margin: 24px auto 80px;
+}
+
+.monet-about-card {
+  width: 100%;
+  margin: 22px auto;
+  padding: 28px;
+  border-radius: 10px;
+  background: rgba(23, 43, 34, 0.72);
+  border: 1px solid rgba(245, 241, 223, 0.18);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+  overflow: hidden;
+}
+
+.monet-about-card h2 {
+  margin: 0 0 22px;
+  color: #f5f1df;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.founder-text {
+  padding: 28px;
+  border-radius: 8px;
+  background: rgba(16, 34, 27, 0.48);
+  color: #f5f1df;
+  line-height: 1.8;
+  font-size: 17px;
+  overflow: hidden;
+}
+
+.founder-sign {
+  text-align: right;
+  margin-top: 22px;
+}
+
+.secret-spark {
+  color: #fff4b8;
+  text-shadow:
+    0 0 5px rgba(255,244,184,0.8),
+    0 0 12px rgba(255,244,184,0.5);
+  cursor: pointer;
+  animation: secretSpark 1.6s infinite alternate;
+}
+
+@keyframes secretSpark {
+  from {
+    opacity: 0.65;
+    text-shadow: 0 0 3px rgba(255,244,184,0.5);
+  }
+  to {
+    opacity: 1;
+    text-shadow:
+      0 0 8px rgba(255,244,184,0.95),
+      0 0 18px rgba(255,244,184,0.6);
+  }
+}
+
+.image-frame {
+  width: 100%;
+  background: rgba(245, 241, 223, 0.08);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-frame img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.portrait-frame img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 700px) {
+  .monet-about-section {
+    width: 92%;
+    margin-top: 18px;
+  }
+
+  .monet-about-card {
+    padding: 18px;
+    margin: 18px auto;
+  }
+
+  .monet-about-card h2 {
+    font-size: 22px;
+  }
+
+  .founder-text {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}

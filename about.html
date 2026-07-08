@@ -92,54 +92,62 @@
         E-mail: monet.official@mute.com
       </div>
     </footer>
-
   </div>
  
+<div id="monetLetterPopup" style="display:none; position:fixed; inset:0; z-index:999999; background:rgba(0,0,0,.72); backdrop-filter:blur(4px); justify-content:center; align-items:center;">
 
-<div id="letterPopup" class="letter-popup">
-  <div class="letter-overlay"></div>
+  <div style="position:relative; width:min(92vw,620px); height:min(88vh,880px); background:url('./monet-project/assets/letter/secret-letter.png') center/100% 100% no-repeat;">
 
-  <div class="letter-modal">
-    <button id="closeLetter" class="letter-close">×</button>
+    <button id="closeMonetLetter" style="position:absolute; top:14px; right:14px; z-index:5; width:34px; height:34px; border-radius:50%; border:0; background:#f5f1df; color:#24372d; font-size:22px;">
+      ×
+    </button>
 
-    <img class="letter-bg-img" src="./monet-project/assets/letter/secret-letter.png" alt="모네 편지지">
+    <div style="position:absolute; top:17%; left:12%; right:12%; bottom:10%; overflow-y:auto; overflow-x:hidden; color:#314235; font-size:15px; line-height:1.9; word-break:keep-all; padding-right:8px;">
 
-    <div class="letter-scroll">
       <p>안녕 반가워! 난 모네야~</p>
 
-      <p>이 편지 마네한테 안 들켰겠지…?? 휴,, 이거 들키면 마네한테 혼나거든~ 이 편지는 비밀편지야~ 알았지? 그래도 용케 세로 드립을 알아내다니~ 너 좀 마음에 드는 걸?</p>
+      <p>이 편지 마네한테 안 들켰겠지…?? 휴,, 이거 들키면 마네한테 혼나거든~ 이 편지는 비밀편지야~ 알았지?</p>
 
-      <p>나 원래, 이 홈페이지 마냥 딱딱하지 않거든? 스티커 붙이고, 꾸미는 거 엄청 좋아한단 말이야 ㅠㅠ 근데 마네 이 녀석이 너무 딱딱해서 홈페이지가 이 모양이야~ 그래도 이게 그으나마 괜찮아진 거야! 원래는 더 했거든. 색이 하나도 없는 거 있지? 종이배 그림도 내가 몰래 그렸어 ㅠㅠ 흑,, 일단 이렇게라도 양해 부탁해~</p>
+      <p>나 원래, 이 홈페이지 마냥 딱딱하지 않거든? 스티커 붙이고, 꾸미는 거 엄청 좋아한단 말이야 ㅠㅠ</p>
 
-      <p>마네가 1층 구조도만 올려놨더라~ 하긴, 사실 손님들 구역은 1층까지만이니까! 근데, 거기만 알려주면 너무 재미없잖아? 너희들이 막 다녀야지, 나도 재밌어. 그래서 너를 위해서 새로운 지도를 준비해봤단다~~ 짠!</p>
+      <p>마네가 1층 구조도만 올려놨더라~ 그래서 너를 위해서 새로운 지도를 준비해봤단다~~ 짠!</p>
 
-      <img class="secret-map-img" src="./monet-project/assets/map/monet-secret-map.png" alt="모네의 비밀 지도">
+      <img src="./monet-project/assets/map/monet-secret-map.png" style="width:100%; display:block; margin:20px 0 8px; border-radius:8px;">
 
-      <a class="map-download" href="./monet-project/assets/map/monet-secret-map.png" download>
+      <a href="./monet-project/assets/map/monet-secret-map.png" download style="display:block; text-align:center; color:#314235; margin-bottom:24px;">
         비밀지도 저장하기
       </a>
 
-      <p>이쁘지! 내가 그린 거야~ ㅎㅎ 필요한 내용은 내가 각주를 많이 달아놨어! 자세한 내용은 밑에 글을 읽어줘!</p>
+      <p>이쁘지! 내가 그린 거야~ ㅎㅎ 자세한 내용은 밑에 글을 읽어줘!</p>
 
-      <p>1층은 아까 봤다시피 상담실, 미니 카페, 식당이 있어~ 상담실은 내가 컬러링 상담 하는 공간이구, 미니 카페는 너랑 매칭 된 상대와 대화를 나눌 수 있는 공간이야.</p>
+      <p>1층은 상담실, 미니 카페, 식당이 있어~ 상담실은 컬러링 상담을 하는 공간이고, 미니 카페는 매칭된 상대와 대화를 나누는 공간이야.</p>
+
+      <p>아… 실수로 4층도 있다고 적어놓기는 했는데, 무시해. 거긴 들어가지 마. 말했지? 나는 푸른 수염이거든!</p>
 
       <p>그럼 난 간다~ 안녕~</p>
+
     </div>
   </div>
 </div>
 
 <script>
-  const letterPopup = document.getElementById("letterPopup");
-  const closeLetter = document.getElementById("closeLetter");
+  const monetLetterPopup = document.getElementById("monetLetterPopup");
+  const closeMonetLetter = document.getElementById("closeMonetLetter");
 
-  document.querySelectorAll(".secret-spark").forEach(el => {
-    el.addEventListener("click", () => {
-      letterPopup.classList.add("show");
+  document.querySelectorAll(".secret-spark").forEach(function(el) {
+    el.addEventListener("click", function() {
+      monetLetterPopup.style.display = "flex";
     });
   });
 
-  closeLetter.addEventListener("click", () => {
-    letterPopup.classList.remove("show");
+  closeMonetLetter.addEventListener("click", function() {
+    monetLetterPopup.style.display = "none";
+  });
+
+  monetLetterPopup.addEventListener("click", function(e) {
+    if (e.target === monetLetterPopup) {
+      monetLetterPopup.style.display = "none";
+    }
   });
 </script>
 </body>

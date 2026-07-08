@@ -265,3 +265,36 @@ document.querySelectorAll(".secret-spark").forEach(letter => {
     console.log("모네의 비밀 편지 팝업 연결 예정");
   });
 });
+const homeSection = document.getElementById("homeSection");
+const aboutSection = document.getElementById("monetAboutSection");
+
+function showPage(pageName) {
+  if (homeSection) homeSection.style.display = "none";
+  if (aboutSection) aboutSection.style.display = "none";
+
+  if (pageName === "home" && homeSection) {
+    homeSection.style.display = "block";
+  }
+
+  if (pageName === "about" && aboutSection) {
+    aboutSection.style.display = "block";
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.querySelectorAll("[data-page='home']").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    showPage("home");
+  }, true);
+});
+
+document.querySelectorAll("[data-page='about']").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    showPage("about");
+  }, true);
+});

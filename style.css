@@ -1004,3 +1004,62 @@ height:18px;
 
 #monetAboutSection.active-page {
   display: block
+/* about.html 전용 */
+.monet-about-section {
+  width: 100%;
+  margin: 22px auto 80px;
+}
+
+.monet-about-card {
+  width: 100%;
+  margin: 22px auto;
+  padding: 28px;
+  border-radius: 8px;
+  background: rgba(15, 34, 27, 0.58);
+  border: 1px solid rgba(245, 241, 223, 0.22);
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+.monet-about-card h2 {
+  margin: 0 0 22px;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.founder-text {
+  padding: 28px;
+  border-radius: 8px;
+  background: rgba(10, 27, 21, 0.46);
+  border: 1px solid rgba(244, 240, 223, 0.14);
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.founder-sign {
+  text-align: right;
+}
+
+.image-frame {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-frame img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.secret-spark {
+  color: #fff4b8;
+  cursor: pointer;
+  animation: secretSpark 1.3s infinite alternate;
+  text-shadow: 0 0 8px rgba(255,244,184,.9);
+}
+
+@keyframes secretSpark {
+  from { opacity: .55; }
+  to { opacity: 1; text-shadow: 0 0 16px rgba(255,244,184,1); }
+}

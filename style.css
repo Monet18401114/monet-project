@@ -1063,3 +1063,127 @@ height:18px;
   from { opacity: .55; }
   to { opacity: 1; text-shadow: 0 0 16px rgba(255,244,184,1); }
 }
+  /* ===== 모네 편지 팝업 ===== */
+
+.letter-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden-letter {
+  display: none !important;
+}
+
+.letter-dark {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(3px);
+}
+
+.letter-wrap {
+  position: relative;
+  width: min(92vw, 620px);
+  height: min(88vh, 860px);
+  z-index: 2;
+  animation: letterOpen 0.35s ease;
+}
+
+@keyframes letterOpen {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.letter-x {
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  z-index: 5;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(245, 241, 223, 0.85);
+  color: #24372d;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.letter-paper {
+  width: 100%;
+  height: 100%;
+  background-image: url("./monet-project/assets/letter/secret-letter.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 155px 78px 80px;
+  overflow: hidden;
+}
+
+.letter-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  color: #314235;
+  font-size: 15px;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+
+.letter-content p {
+  margin: 0 0 18px;
+}
+
+.secret-map-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 22px auto 10px;
+  border-radius: 8px;
+}
+
+.map-download {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 24px;
+  padding: 8px 18px;
+  border: 1px solid rgba(49, 66, 53, 0.45);
+  border-radius: 999px;
+  color: #314235;
+  text-decoration: none;
+  font-size: 14px;
+  background: rgba(255,255,255,0.35);
+}
+
+@media screen and (max-width: 700px) {
+  .letter-wrap {
+    width: 94vw;
+    height: 86vh;
+  }
+
+  .letter-paper {
+    padding: 130px 42px 65px;
+  }
+
+  .letter-content {
+    font-size: 13.5px;
+    line-height: 1.8;
+  }
+
+  .letter-x {
+    right: 12px;
+    top: 12px;
+  }
+}

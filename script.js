@@ -298,3 +298,40 @@ document.querySelectorAll("[data-page='about']").forEach(btn => {
     showPage("about");
   }, true);
 });
+// =======================
+// Page Switch System
+// =======================
+
+const homeSection = document.getElementById("homeSection");
+const aboutSection = document.getElementById("monetAboutSection");
+
+function showMonetPage(pageName) {
+  if (homeSection) homeSection.style.display = "none";
+  if (aboutSection) aboutSection.style.display = "none";
+
+  if (pageName === "home" && homeSection) {
+    homeSection.style.display = "block";
+  }
+
+  if (pageName === "about" && aboutSection) {
+    aboutSection.style.display = "block";
+  }
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+document.querySelectorAll("[data-page='home']").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    showMonetPage("home");
+  }, true);
+});
+
+document.querySelectorAll("[data-page='about']").forEach(btn => {
+  btn.addEventListener("click", e => {
+    e.preventDefault();
+    e.stopPropagation();
+    showMonetPage("about");
+  }, true);
+});

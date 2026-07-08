@@ -520,7 +520,7 @@ height:18px;
     display: grid;
     grid-template-columns: 70px 1fr;
     gap: 10px;
-    margin: 14px 0;
+    margin: 10px 0 !important;
   }
 
   .login-row label {
@@ -680,9 +680,9 @@ height:18px;
 @media screen and (max-width: 700px) {
   #loginOverlay .login-card {
     width: 86vw !important;
-    max-height: 78vh !important;
+    max-height: none !important;
     padding: 24px 24px !important;
-    overflow-y: auto !important;
+    overflow-y: visible !important;
   }
 
   #loginOverlay .login-title {

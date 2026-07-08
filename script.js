@@ -68,3 +68,130 @@ document.querySelectorAll("[data-page]").forEach((button) => {
     }
   });
 });
+/*==========================
+LOGIN
+==========================*/
+
+const loginOverlay=document.getElementById("loginOverlay");
+const loadingOverlay=document.getElementById("loadingOverlay");
+const errorOverlay=document.getElementById("errorOverlay");
+
+const captcha=document.getElementById("captchaText");
+const captchaInput=document.getElementById("captchaInput");
+
+let race="";
+let group="";
+
+function makeCaptcha(){
+
+const chars="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+let code="";
+
+for(let i=0;i<5;i++){
+
+code+=chars[Math.floor(Math.random()*chars.length)];
+
+}
+
+captcha.innerText=code;
+
+}
+
+makeCaptcha();
+
+document
+.getElementById("refreshCaptcha")
+.onclick=makeCaptcha;
+
+document
+.querySelectorAll(".raceBtn")
+.forEach(btn=>{
+
+btn.onclick=()=>{
+
+race=btn.dataset.race;
+
+};
+
+});
+
+document
+.querySelectorAll(".groupBtn")
+.forEach(btn=>{
+
+btn.onclick=()=>{
+
+group=btn.dataset.group;
+
+};
+
+});
+
+document
+.getElementById("loginBtn")
+.onclick=()=>{
+
+if(captchaInput.value!==captcha.innerText){
+
+alert("인증번호가 올바르지 않습니다.");
+
+makeCaptcha();
+
+return;
+
+}
+
+if(race==="paper"&&group==="bad"){
+
+loginOverlay.style.display="none";
+
+errorOverlay.style.display="flex";
+
+let n=5;
+
+const timer=setInterval(()=>{
+
+n--;
+
+document.getElementById("countDown").innerText=n;
+
+if(n===0){
+
+clearInterval(timer);
+
+location.href="https://www.google.com";
+
+}
+
+},1000);
+
+return;
+
+}
+
+loginOverlay.style.display="none";
+
+loadingOverlay.style.display="flex";
+
+let p=0;
+
+const load=setInterval(()=>{
+
+p+=5;
+
+document
+.getElementById("loadingBar")
+.value=p;
+
+if(p>=100){
+
+clearInterval(load);
+
+loadingOverlay.style.display="none";
+
+}
+
+},60);
+
+};

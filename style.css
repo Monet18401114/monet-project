@@ -985,3 +985,11 @@ height:18px;
     line-height: 1.75;
   }
 }
+.hidden-page {
+  display: none !important;
+}
+
+.page-section {
+  width: min(92%, 760px);
+  margin: 24px auto 80px;
+}
